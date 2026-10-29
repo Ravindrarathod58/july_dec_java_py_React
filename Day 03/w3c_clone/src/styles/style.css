@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 90px;
+}
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid; */
+  width: 48%;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid; */
+  width: 45%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid; */
+  width: 60%;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav div a {
+  text-decoration: none;
+  color: black;
+}
+.searchBar {
+  display: flex;
+
+  align-items: center;
+  /* border: 1px solid; */
+}
+.search-box {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  border-radius: 30px;
+}
+.search-box input {
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  border-radius: 30px;
+}
+.search-box span {
+  color: gray;
+}
+.appBadge {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #a3cffb;
+  position: relative;
+  width: 25%;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #a3cffb59;
+  font-size: 13px;
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  /* border: 1px solid; */
+  font-size: 10px;
+  height: 18px;
+  width: 35px;
+  background-color: rgb(225, 207, 7);
+}
+.badgeText {
+  display: flex;
+  flex-direction: column;
+}
+.appBadge img {
+  height: 40px;
+  width: 40px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.buttons {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.buttons button {
+  width: 40%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.card-container {
+  /* border: 1px solid red; */
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  /* border: 1px solid red; */
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  box-shadow: 0 0 4px gray;
+}
+.card img {
+  width: 60%;
+  height: 50%;
+}
