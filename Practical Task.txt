@@ -1,0 +1,10 @@
+
+
+Practice Tasks Day o1
+☐	Scaffold a Vite project and replace the default App with a page that shows your name and three hobbies.
+☐	Practice array methods: given an array of product objects, produce names of those under ₹500, sorted by price.
+
+
+☐	Build ProfileCard, Button (with variant prop: primary / danger) and Avatar components.
+☐	Create a Layout component with Header, Footer and children, then wrap two different pages in it.
+☐	Render a product card three times with different props and a disabled state.
