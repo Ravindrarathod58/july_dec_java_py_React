@@ -1,0 +1,50 @@
+.container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counterDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 5px gray;
+  width: 20%;
+  height: 20%;
+  border-radius: 20px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+.cart {
+  height: 40px;
+  width: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  left: 22%;
+}
