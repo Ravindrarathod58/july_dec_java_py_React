@@ -61,9 +61,7 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:myw6MZy92ibGb70UO3FBS"
-			],
+			"selectedShapeIds": [],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
