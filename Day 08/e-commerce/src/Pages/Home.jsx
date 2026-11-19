@@ -19,6 +19,7 @@ function Home() {
     }
     getData();
   }, []);
+
   return (
     <div className="mt-3 container d-flex flex-wrap gap-2">
       {data.length > 0 ? (

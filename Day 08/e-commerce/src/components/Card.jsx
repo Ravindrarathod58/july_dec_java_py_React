@@ -1,5 +1,10 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 function Card({ src, title, price, id, action }) {
+  const navigate = useNavigate();
+  function nav() {
+    navigate("/checkout/" + id);
+  }
+
   return (
     <Link to={"/productDetail/" + id}>
       <div
@@ -13,7 +18,11 @@ function Card({ src, title, price, id, action }) {
           <span>&#8377; {price}</span>
 
           <div className="d-flex w-100 justify-content-around">
-            <button className="btn btn-primary w-50" to={"/checkout"}>
+            <button
+              onClick={nav}
+              className="btn btn-primary w-50"
+              to={"/checkout"}
+            >
               Buy Now
             </button>
             <button
