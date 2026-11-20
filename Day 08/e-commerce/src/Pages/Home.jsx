@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card.jsx";
+import { useContext } from "react";
+import { CartContext } from "../context/cartContex.jsx";
 function Home() {
   // State to hold the products
   const [data, setData] = useState([]);
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
   //   side effect to fetch the data
+
+  const { cart, addToCart } = useContext(CartContext);
+
+  // console.log(cart);
+  console.log(cart);
+  // console.log(removeFromCart);
   useEffect(() => {
     // fetch ( async)
 
@@ -20,6 +28,11 @@ function Home() {
     getData();
   }, []);
 
+  function addProduct(id) {
+    const product = data.filter((produc) => produc.id == id);
+    addToCart(product[0]);
+    alert("Item added to cart");
+  }
   return (
     <div className="mt-3 container d-flex flex-wrap gap-2">
       {data.length > 0 ? (
@@ -30,7 +43,8 @@ function Home() {
             title={item.title}
             price={item.price}
             id={item.id}
-            action={setCart}
+            type="product"
+            action={addProduct}
           />
         ))
       ) : (

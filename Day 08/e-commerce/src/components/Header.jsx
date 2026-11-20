@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router";
 function Header() {
+  const navigate = useNavigate();
+  function nav() {
+    navigate("/cart");
+  }
+
   return (
     <div className="mb-2" style={{ height: "80px" }}>
       <header className="d-flex justify-content-between align-items-center p-3 border border-2 position-fixed top-0 w-100 bg-light">
@@ -8,7 +14,7 @@ function Header() {
           <span className="bi bi-search"></span>
         </div>
         <div>
-          <button>
+          <button onClick={nav}>
             <span className="bi bi-cart"></span>
           </button>
           <button>
