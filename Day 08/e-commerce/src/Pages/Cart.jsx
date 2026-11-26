@@ -2,11 +2,12 @@ import Card from "../components/Card";
 import { useContext } from "react";
 import { CartContext } from "../context/cartContex";
 function Cart() {
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, dispatch } = useContext(CartContext);
+  console.log(cart.cart);
   return (
     <div className="container d-flex min-vh-100 flex-wrap gap-2">
-      {cart.length > 0 ? (
-        cart.map((item) => (
+      {cart.cart.length > 0 ? (
+        cart.cart.map((item) => (
           <Card
             key={item.id}
             src={item.image}
@@ -14,7 +15,8 @@ function Cart() {
             price={item.price}
             id={item.id}
             type="cartItem"
-            action={removeFromCart}
+            quantity={item.quantity}
+            action={dispatch}
           />
         ))
       ) : (

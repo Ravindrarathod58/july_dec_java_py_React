@@ -8,7 +8,8 @@ function Home() {
   // const [cart, setCart] = useState([]);
   //   side effect to fetch the data
 
-  const { cart, addToCart } = useContext(CartContext);
+  // const { cart, addToCart } = useContext(CartContext);
+  const { cart, dispatch } = useContext(CartContext);
 
   // console.log(cart);
   console.log(cart);
@@ -28,11 +29,11 @@ function Home() {
     getData();
   }, []);
 
-  function addProduct(id) {
-    const product = data.filter((produc) => produc.id == id);
-    addToCart(product[0]);
-    alert("Item added to cart");
-  }
+  // function addProduct(id) {
+  //   const product = data.filter((produc) => produc.id == id);
+  //   // addToCart(product[0]);
+  //   alert("Item added to cart");
+  // }
   return (
     <div className="mt-3 container d-flex flex-wrap gap-2">
       {data.length > 0 ? (
@@ -44,7 +45,7 @@ function Home() {
             price={item.price}
             id={item.id}
             type="product"
-            action={addProduct}
+            dispatch={dispatch}
           />
         ))
       ) : (
